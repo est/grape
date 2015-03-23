@@ -1030,7 +1030,7 @@ You can rescue a `Grape::Exceptions::ValidationErrors` and respond with a custom
 
 ```ruby
 format :json
-subject.rescue_from Grape::Exceptions::ValidationErrors do |e|
+rescue_from Grape::Exceptions::ValidationErrors do |e|
   rack_response e.to_json, 400
 end
 ```
